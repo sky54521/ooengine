@@ -54,7 +54,7 @@ typeof() {
 }
 
 new() {
-  local
+  local class="$1"
   local cvar="$2"
   shift
   shift
@@ -69,7 +69,6 @@ new() {
       loadfunc; ${class}::${func} \"\$*\"; rt=\$?; savevar; CLASS=\$c;
       THIS=\$t; return $rt;
     }"
-
   done
   eval "${cvar}.${class} \"\$*\" || true"
 }

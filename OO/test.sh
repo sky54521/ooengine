@@ -4,9 +4,14 @@ x.a(){
 	echo "xxx"
 }
 
-x.a
+fun(){
+	echo "fun"
+}
 
-echo "${x::a}"
+echo ${fun}
+
+x.a
+echo "${xa}"
 
 
 
